@@ -3,7 +3,15 @@ Page({
   data:{
     thumb:'',
     nickname:'',
-    orders:[],
+    gender:'',
+    orders: [{
+      "number": "A4561245678641685",
+      "thumb": "/image/c2.png",
+      "name": "梨花带雨",
+      "count": 3,
+      "status": "待付款",
+      "money": 5.00
+    }],
     hasAddress:false,
     address:{}
   },
@@ -15,8 +23,12 @@ Page({
     wx.getUserInfo({
       success: function(res){
         self.setData({
+          //用户头像
           thumb: res.userInfo.avatarUrl,
-          nickname: res.userInfo.nickName
+          //用户昵称
+          nickname: res.userInfo.nickName,
+          //用户性别
+          gender: res.userInfo.gender
         })
       }
     }),
@@ -31,8 +43,9 @@ Page({
           orders: res.data
         })
       }
-    })
+    });
   },
+
   onShow(){
     var self = this;
     /**

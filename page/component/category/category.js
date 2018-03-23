@@ -1,5 +1,6 @@
 Page({
     data: {
+      //水果种类
         category: [
             {name:'果味',id:'guowei'},
             {name:'蔬菜',id:'shucai'},
@@ -8,6 +9,7 @@ Page({
             {name:'粗茶',id:'cucha'},
             {name:'淡饭',id:'danfan'}
         ],
+        //detail读取水果分类数据
         detail: [{
           "id": "guowei",
           "banner": "/image/c1.png",
@@ -195,13 +197,15 @@ Page({
           ]
         }],
         curIndex: 0,
+        //是否滚动
         isScroll: false,
         toView: 'guowei'
     },
     // onReady(){
-    //     var self = this;
+    //   var self = this;
     //     wx.request({
-    //       url:'./categorys.js',
+    //       //读取分类列表数据URL地址
+    //       url:'./category.txt',
     //         success(res){
     //             self.setData({
     //                 detail : res.data

@@ -10,6 +10,9 @@
     font-size: 28rpx;
     color: #fff;
 }
+.header view{
+  margin-right: 20rpx;
+}
 .header .thumb{
     position: absolute;
     left: 30rpx;
@@ -18,6 +21,7 @@
     height: 100rpx;
     border-radius: 50%;
 }
+
 .header .about{
     float: right;
 }
