@@ -4,6 +4,7 @@ Page({
     thumb:'',
     nickname:'',
     gender:'',
+    city:'',
     orders: [{
       "number": "A4561245678641685",
       "thumb": "/image/c2.png",
@@ -28,7 +29,9 @@ Page({
           //用户昵称
           nickname: res.userInfo.nickName,
           //用户性别
-          gender: res.userInfo.gender
+          gender: res.userInfo.gender,
+          //用户城市
+          city: res.userInfo.city
         })
       }
     }),
@@ -37,6 +40,7 @@ Page({
      * 发起请求获取订单列表信息
      */
     wx.request({
+     
       url: 'http://www.gdfengshuo.com/api/wx/orders.txt',
       success(res){
         self.setData({
